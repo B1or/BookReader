@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Book Reader</string>
+    <string name="illustration">Illustration</string>
+    <string name="bookmark">Закладка</string>
 </resources>
