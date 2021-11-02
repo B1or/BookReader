@@ -2,4 +2,9 @@
     <string name="app_name">Book Reader</string>
     <string name="illustration">Illustration</string>
     <string name="bookmark">Закладка</string>
+    <string name="scale_up">Увеличить</string>
+    <string name="scale_down">Уменьшить</string>
+    <string name="contents">Оглавление</string>
+    <string name="chapter">Глава</string>
+    <string name="day_night_mode">Режим день-ночь</string>
 </resources>

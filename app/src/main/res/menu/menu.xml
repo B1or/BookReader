@@ -3,8 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bookmark"
+        android:id="@+id/bookmarkItemMenu"
         android:icon="@drawable/ic_bookmark"
         android:title="@string/bookmark"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/scaleUpItemMenu"
+        android:icon="@drawable/ic_zoom_in"
+        android:title="@string/scale_up"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/scaleDownItemMenu"
+        android:icon="@drawable/ic_zoom_out"
+        android:title="@string/scale_down"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/dayNightModeItemMenu"
+        android:icon="@drawable/ic_dark_mode"
+        android:title="@string/day_night_mode"
+        app:showAsAction="ifRoom" />
 </menu>

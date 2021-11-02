@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="ru.ircoder.bookreader.SharedViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ChapterActivity">
+        android:background="?attr/colorSurface"
+        tools:context=".ChapterFragment">
 
         <ScrollView
+            android:id="@+id/svChapter"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/avChapter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -33,6 +39,8 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/title"
                     tools:text="Глава II" />
 
                 <ImageView
@@ -52,9 +60,25 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text"
                     tools:text="Через три дня старый майор мирно опочил во сне. Его тело было предано земле неподалеку от фруктого сада." />
             </LinearLayout>
         </ScrollView>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/avChapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </com.google.android.gms.ads.AdView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

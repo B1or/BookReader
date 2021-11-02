@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/contentsFragment">
+
+    <fragment
+        android:id="@+id/contentsFragment"
+        android:name="ru.ircoder.bookreader.ContentsFragment"
+        android:label="@string/contents"
+        tools:layout="@layout/fragment_contents" >
+        <action
+            android:id="@+id/action_contentsFragment_to_chapterFragment"
+            app:destination="@id/chapterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chapterFragment"
+        android:name="ru.ircoder.bookreader.ChapterFragment"
+        android:label="@string/chapter"
+        tools:layout="@layout/fragment_chapter" />
+</navigation>
