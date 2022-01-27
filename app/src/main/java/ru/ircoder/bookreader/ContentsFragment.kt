@@ -40,12 +40,12 @@ class ContentsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         book = readBook()
         binding.rvHeadings.layoutManager = LinearLayoutManager(this.context)
-        model.textSize.observe(viewLifecycleOwner, {
+        model.textSize.observe(viewLifecycleOwner) {
             Log.d(TAG, "observe textSize: $it")
             binding.rvHeadings.adapter = HeadingsAdapter(book) { position ->
                 onHeadingsItemClick(position)
             }
-        })
+        }
         mAdView = binding.avContents
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)

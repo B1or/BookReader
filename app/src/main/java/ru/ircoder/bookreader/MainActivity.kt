@@ -35,14 +35,13 @@ class MainActivity : AppCompatActivity() {
                 .build()
         )
 
-        model.nightMode.observe(this, { nightMode ->
+        model.nightMode.observe(this) { nightMode ->
             if (nightMode) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            }
-            else {
+            } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
-        })
+        }
         nightMode =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
                 resources.configuration.isNightModeActive

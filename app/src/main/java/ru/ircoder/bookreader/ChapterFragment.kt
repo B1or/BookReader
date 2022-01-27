@@ -55,7 +55,7 @@ class ChapterFragment : Fragment() {
             val scrollPosition = (positionRatio * (binding.svChapter.getChildAt(0).height - binding.svChapter.height)).toInt()
             binding.svChapter.scrollTo(0, scrollPosition)
         }
-        model.textSize.observe(viewLifecycleOwner, { textSize ->
+        model.textSize.observe(viewLifecycleOwner) { textSize ->
             Log.d(MainActivity.TAG, "observed, textSize: $textSize")
             when (textSize) {
                 1 -> {
@@ -79,7 +79,7 @@ class ChapterFragment : Fragment() {
                     binding.tvBody.textSize = 20f
                 }
             }
-        })
+        }
         mAdView = binding.avChapter
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
